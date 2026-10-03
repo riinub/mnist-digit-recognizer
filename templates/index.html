@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title> 28x28 Digit Canvas</title>
+    
+    <style> 
+        body{ 
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .canvas-container{
+            text-align: center;
+        }
+        canvas {
+            /* This make 28px grid large enough to be see and draw on */
+            width: 280px;
+            height: 280px;
+            background-color: black;
+            border: 4px solid #333;
+            cursor: crosshair;
+            image-rendering: pixelated;
+            /* prevents blurry sclainf so individual pixels remian crisp*/
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+        </style>    
+</head>
+
+<body>
+    <div class="canvas-container">
+        <h3>Draw a Digit</h3>
+        <canvas id="digitCanvas" width="28" height="28"></canvas>
+        <br>
+
+        <button id="clearBtn">Clear</button>
+        <button id="predictBtn">Predict</button>
+
+        <h2 id="predictionText">Prediction: </h2>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
