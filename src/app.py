@@ -3,14 +3,14 @@
 """
 from flask import Flask, request, render_template, jsonify
 from model import make_predictions
-from PIL import Image #python imaging library
+from PIL import Image 
 import numpy as np  
 import base64
 import io
 
 app = Flask(__name__)
 
-data = np.load("models/mnist_parameters2.npz")
+data = np.load("src/models/mnist_parameters2.npz")
 for key in data.files:
     print(key, data[key].shape)
 
